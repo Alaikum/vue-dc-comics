@@ -60,26 +60,33 @@ export default {
         height: 155px;
         font-size: 1rem;
         display: flex;
- 
-            align-items: center;
+
+        align-items: center;
 
         ul {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-basis: 100%;
+            text-transform: uppercase;
+            font-size: 12px;
+    
 
-            li{
-                flex-basis: calc(100% / 5 );
+            li {
+                flex-basis: calc(100% / 5);
             }
+
             a {
                 display: flex;
                 justify-content: center;
-            align-items: center;
+                align-items: center;
                 gap: 18px;
-                img{
-                    height: 55px;
+
+                img {
+                    max-height: 55px;
+                    max-width: 55px;
                 }
-               
+
             }
         }
     }
