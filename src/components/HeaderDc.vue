@@ -77,6 +77,7 @@ export default {
   align-items: center;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  
 
   figure{
     max-width: 82px;
@@ -88,6 +89,7 @@ export default {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
+    flex-wrap: wrap;
 
     li {
       padding: 1rem 0;
@@ -95,6 +97,7 @@ export default {
       &.active, &:hover {
         color: $blue-dc;
         border-bottom: 3px solid $blue-dc;
+        cursor: pointer;
 
       }
     }

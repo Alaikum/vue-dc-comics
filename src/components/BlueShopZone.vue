@@ -70,6 +70,7 @@ export default {
             flex-basis: 100%;
             text-transform: uppercase;
             font-size: 12px;
+            flex-wrap: wrap;
     
 
             li {
