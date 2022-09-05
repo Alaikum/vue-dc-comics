@@ -59,7 +59,11 @@ export default {
 
       h2{
         padding: 10px;
-        color: $blue-dc
+        color: $blue-dc;
+        cursor: pointer;
+      }
+      img{
+        cursor: pointer;
       }
     }
   }
