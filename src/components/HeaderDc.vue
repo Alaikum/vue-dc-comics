@@ -2,7 +2,7 @@
   <nav>
     <div class="container">
       <figure>
-        <img src="@/assets/dc-logo.png" alt="Logo">
+        <img src="../assets/dc-logo.png" alt="Logo">
       </figure>
 
       <ul>
@@ -70,7 +70,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @import '@/style/variables';
+  @import '../style/variables';
 .container {
   display: flex;
   justify-content: space-between;
