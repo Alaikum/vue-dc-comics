@@ -1,20 +1,31 @@
 <template>
   <main>
     <div class="container">
-      <h2>
-        Coming Soon
-      </h2>
+      <div class="cards">
+
+        <HeroCards v-for="(slide, i) in cards" :key="i" :thumb="slide.thumb" :series="slide.series" />
+
+      </div>
     </div>
-   <BlueShopZone/>
+    <BlueShopZone />
   </main>
 </template>
 
 <script>
 import BlueShopZone from '../components/BlueShopZone.vue';
+import HeroCards from '../components/HeroCards.vue';
+import cards from '../myscript';
 export default {
-    components: {
-      BlueShopZone
+  components: {
+    BlueShopZone,
+    HeroCards
+  },
+  data() {
+    return {
+      cards
     }
+  },
+
 }
 </script>
 
@@ -23,11 +34,14 @@ export default {
 main {
   background-color: black;
   color: white;
-  height:285px;
+  // height:285px;
   font-size: 2rem;
 
-  h2{
-      line-height: 130px;
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    
   }
 }
 </style>

@@ -4,7 +4,7 @@
       <span class="input__footer">Sign-up Now!</span>
       <div class="follow__us">
         <h2>Follow US</h2>
-        <!-- <img :src="`../assets/${facebook}`" alt="MMMMs"> -->
+        <!-- <img :src="`../assets/${facebook}`" alt="Facebook"> -->
         <img src="../assets/footer-facebook.png" alt="Facebook" >
         <img src="../assets/footer-twitter.png" alt="Twitter" >
         <img src="../assets/footer-youtube.png" alt="YouTube" >
@@ -64,6 +64,7 @@ export default {
       }
       img{
         cursor: pointer;
+     
       }
     }
   }

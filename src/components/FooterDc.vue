@@ -5,7 +5,7 @@
         <div class="ul__footer">
           <ul>
             <h2>Dc comics</h2>
-            <li v-for="el in dcComics" :key="el.id">
+            <li v-for="(el,i) in dcComics" :key="i">
               <a href="">
                 {{ el }}
               </a>
