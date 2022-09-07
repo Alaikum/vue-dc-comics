@@ -2,38 +2,10 @@
     <div class="shop__dc">
         <div class="container">
             <ul>
-                <li>
-                    <a href="">
-                        <img src="../assets/buy-comics-digital-comics.png" alt="buy-comics-digital-comics">
-                        <p>digital comics</p>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <img src="../assets/buy-comics-merchandise.png" alt="assets/buy-comics-merchandise">
-                        <p>dc merchandise</p>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <img src="../assets/buy-comics-subscriptions.png" alt="buy-comics-subscriptions">
-                        <p>subscription</p>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <img src="../assets/buy-comics-shop-locator.png" alt="buy-comics-shop-locator">
-                        <p>comic shop locator</p>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <img src="../assets/buy-dc-power-visa.svg" alt="buy-dc-power-visa">
-                        <p>dc power visa</p>
+                <li v-for="(el,id) in shopBlue" :key="id">
+                    <a href="#">
+                        <img :src="el.img" alt="buy-comics-digital-comics">
+                        <p>{{el.text}}</p>
                     </a>
                 </li>
             </ul>
@@ -43,6 +15,32 @@
 
 <script>
 export default {
+    data() {
+        return {
+            shopBlue: [
+                {
+                    img: require("../assets/buy-comics-digital-comics.png"),
+                    text: 'Digital Comics'
+                },
+                {
+                    img: require("../assets/buy-comics-merchandise.png"),
+                    text: 'Dc Merchandise'
+                },
+                {
+                    img: require("../assets/buy-comics-subscriptions.png"),
+                    text: 'Subscription'
+                },
+                {
+                    img: require("../assets/buy-comics-shop-locator.png"),
+                    text: 'Comic Shop Locator'
+                },
+                {
+                    img: require("../assets/buy-dc-power-visa.svg"),
+                    text: 'Dc Power Visa'
+                }
+            ]
+        }
+    }
 
 }
 </script>
@@ -71,7 +69,7 @@ export default {
             text-transform: uppercase;
             font-size: 12px;
             flex-wrap: wrap;
-    
+
 
             li {
                 flex-basis: calc(100% / 5);

@@ -1,7 +1,9 @@
 <template>
 
     <div class="card">
-        <img :src="thumb" alt="">
+        <figure>
+            <img :src="thumb" alt="">
+        </figure>
         <p>{{ series }}</p>
     </div>
 
@@ -23,8 +25,17 @@ export default {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
+    figure {
+        max-height: 185px;
+        overflow: hidden;
+
+    }
+
+    p {
+        padding: 20px 0;
+        font-weight: 700;
+    }
 }
 </style>

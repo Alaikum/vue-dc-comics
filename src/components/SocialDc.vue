@@ -4,12 +4,7 @@
       <span class="input__footer">Sign-up Now!</span>
       <div class="follow__us">
         <h2>Follow US</h2>
-        <!-- <img :src="`../assets/${facebook}`" alt="Facebook"> -->
-        <img src="../assets/footer-facebook.png" alt="Facebook" >
-        <img src="../assets/footer-twitter.png" alt="Twitter" >
-        <img src="../assets/footer-youtube.png" alt="YouTube" >
-        <img src="../assets/footer-periscope.png" alt="Periscope" >
-        <img src="../assets/footer-pinterest.png" alt="Pinterest" >
+        <img v-for="(el,id) in social" :key="id" :src="el.img" :alt="el.text">
       </div>
     </div>
 
@@ -21,9 +16,30 @@
 <script>
 
 export default {
-  data(){
-    return{
-      facebook:'footer-facebook.png'
+  data() {
+    return {
+      social: [
+        {
+          img: require("../assets/footer-facebook.png"),
+          text: 'Facebook'
+        },
+        {
+          img: require("../assets/footer-twitter.png"),
+          text: 'Twitter'
+        },
+        {
+          img: require("../assets/footer-youtube.png"),
+          text: 'Youtube'
+        },
+        {
+          img: require("../assets/footer-periscope.png"),
+          text: 'Periscope'
+        },
+        {
+          img: require("../assets/footer-pinterest.png"),
+          text: 'Pinterest'
+        },
+      ]
     }
   }
 
@@ -33,16 +49,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @import '../style/variables';
+@import '../style/variables';
+
 .social__footer {
   background-color: #303030;
-  
 
-  .container{
+
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .input__footer{
+
+    .input__footer {
       cursor: pointer;
       text-transform: uppercase;
       color: white;
@@ -50,21 +68,22 @@ export default {
       padding: 15px;
     }
 
-    .follow__us{
+    .follow__us {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       height: 110px;
 
-      h2{
+      h2 {
         padding: 10px;
         color: $blue-dc;
         cursor: pointer;
       }
-      img{
+
+      img {
         cursor: pointer;
-     
+
       }
     }
   }

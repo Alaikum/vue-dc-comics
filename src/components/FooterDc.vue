@@ -6,7 +6,7 @@
           <ul>
             <h2>Dc comics</h2>
             <li v-for="(el,i) in dcComics" :key="i">
-              <a href="">
+              <a href="##">
                 {{ el }}
               </a>
             </li>
@@ -14,7 +14,7 @@
           <ul>
             <h2>Shop</h2>
             <li v-for="el in shop" :key="el.id">
-              <a href="">
+              <a href="##">
                 {{ el }}
               </a>
             </li>
@@ -22,7 +22,7 @@
           <ul>
             <h2>Dc</h2>
             <li v-for="el in dc" :key="el.id">
-              <a href="">
+              <a href="##" >
                 {{ el }}
               </a>
             </li>
@@ -30,7 +30,7 @@
           <ul>
             <h2>Sites</h2>
             <li v-for="el in sites" :key="el.id">
-              <a href="">
+              <a href="##">
                 {{ el }}
               </a>
             </li>

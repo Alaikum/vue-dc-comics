@@ -6,56 +6,12 @@
       </figure>
 
       <ul>
-        <li>
-          <a href="">
-            characters
+        <li v-for="(link,id) in links" :key="id" :class="id===puntatore ? 'active': ''" @click="puntatore=id">
+          <a href="#">
+            {{link}}
           </a>
         </li>
-        <li class="active">
-          <a href="">
-            comics
-          </a>
-        </li>
-        <li>
-          <a href="">
-            movies
-          </a>
-        </li>
-        <li>
-          <a href="">
-            tv
-          </a>
-        </li>
-        <li>
-          <a href="">
-            games
-          </a>
-        </li>
-        <li>
-          <a href="">
-            collectibles
-          </a>
-        </li>
-        <li>
-          <a href="">
-            videos
-          </a>
-        </li>
-        <li>
-          <a href="">
-            fans
-          </a>
-        </li>
-        <li>
-          <a href="">
-            news
-          </a>
-        </li>
-        <li>
-          <a href="">
-            shop
-          </a>
-        </li>
+       
       </ul>
 
     </div>
@@ -64,24 +20,34 @@
 
 <script>
 export default {
+  data() {
+    return {
+      links: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Collectibles', 'Videos', 'Fans', 'Shop', 'News'],
+      puntatore: 1
+
+    }
+  }
 
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @import '../style/variables';
+@import '../style/variables';
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  
 
-  figure{
+
+
+  figure {
     max-width: 82px;
+    padding-bottom: 5px;
   }
+
   ul {
     display: flex;
     justify-content: space-between;
@@ -92,11 +58,12 @@ export default {
     flex-wrap: wrap;
 
     li {
-      padding: 1rem 0;
+      padding: 35px 0;
 
-      &.active, &:hover {
+      &.active,
+      &:hover {
         color: $blue-dc;
-        border-bottom: 3px solid $blue-dc;
+        border-bottom: 5px solid $blue-dc;
         cursor: pointer;
 
       }
